@@ -27,5 +27,8 @@
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
     "glob": "^10.3.10"
+  },
+  "engines": {
+    "node": ">=18.17.0"
   }
 }
