@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen;
+  }
+}
+
+@layer components {
+  .calc-button {
+    @apply flex items-center justify-center text-xl font-semibold rounded-xl transition-all duration-200 shadow-button active:scale-95;
+  }
+  
+  .calc-button-number {
+    @apply calc-button bg-calc-number hover:bg-calc-number-hover text-white;
+  }
+  
+  .calc-button-operation {
+    @apply calc-button bg-calc-operation hover:bg-calc-operation-hover text-white;
+  }
+  
+  .calc-button-equals {
+    @apply calc-button bg-calc-accent hover:bg-calc-accent-hover text-white;
+  }
+  
+  .calc-button-clear {
+    @apply calc-button bg-calc-clear hover:bg-calc-clear-hover text-white;
+  }
+  
+  .calc-button-delete {
+    @apply calc-button bg-gray-600 hover:bg-gray-500 text-white;
+  }
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
