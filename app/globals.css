@@ -10,7 +10,7 @@
 
 @layer components {
   .calc-button {
-    @apply flex items-center justify-center text-xl font-semibold rounded-xl transition-all duration-200 shadow-button active:scale-95;
+    @apply flex items-center justify-center text-lg font-semibold rounded-xl transition-all duration-200 shadow-button active:scale-95 h-14 min-w-0 text-center;
   }
   
   .calc-button-number {
@@ -32,6 +32,22 @@
   .calc-button-delete {
     @apply calc-button bg-gray-600 hover:bg-gray-500 text-white;
   }
+  
+  .calc-button-scientific {
+    @apply calc-button bg-blue-600 hover:bg-blue-500 text-white text-sm;
+  }
+  
+  .calc-button-constant {
+    @apply calc-button bg-purple-600 hover:bg-purple-500 text-white;
+  }
+  
+  .calc-button-function {
+    @apply calc-button bg-green-600 hover:bg-green-500 text-white text-sm;
+  }
+  
+  .calc-button-mode {
+    @apply calc-button bg-orange-600 hover:bg-orange-500 text-white text-sm;
+  }
 }
 
 /* Custom scrollbar for better aesthetics */
@@ -50,4 +66,11 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive adjustments for scientific mode */
+@media (max-width: 768px) {
+  .calc-button {
+    @apply h-12 text-sm;
+  }
 }
